@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TIPS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" ,shrink-to-fit="no">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="alert alert-primary">
+    This is a primary alert with <a href="#">网战天下</a>. Give it a click if you like.
+</div>
+<div class="alert alert-primary">
+    This is a primary alert with <a href="#" class="alert-link">网战天下</a>. Give it a click if you like.
+</div>
+<div class="alert alert-secondary">
+    This is a secondary alert with <a href="#" class="alert-link">网战天下</a>. Give it a click if you like.
+</div>
+    <div class="alert alert-success">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+    <div id="Alert01" class="alert alert-danger alert-dismissible  fade show">
+        <strong>登录失败!</strong> 您的用户名或密码错误.
+        <button id="btn" class="close" >&times;</button>
+    </div>
+    <div class="alert alert-success">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+</div>
+        <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+        <script>
+            $('#btn').click(function () {
+              $('#Alert01').alert('close');
+            })
+            $('#Alert01').on('close.bs.alert',function () {
+                alert('close');
+            }).on('closed.bs.alert',function () {
+                alert('closed')
+            })
+        </script>
+</body>
+</html>
